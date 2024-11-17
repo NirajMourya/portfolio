@@ -13,6 +13,8 @@ const TAB_DATA = [
                 <li>React</li>
                 <li>Node.js</li>
                 <li>SharePoint</li>
+                <li>HTML</li>
+                <li>CSS</li>
             </ul>
         )
     },
@@ -23,7 +25,7 @@ const TAB_DATA = [
             <ul className="list-disc pl-2">
                 <li>Bachelor of Engineering (Information Technology)</li>
                 <li>D. Y. Patil College of Engineering</li>
-                <li>Pune, India</li>
+                <li>Pune, Maharashtra, India</li>
             </ul>
         )
     },
