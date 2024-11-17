@@ -34,7 +34,8 @@ const TAB_DATA = [
         id:"experience",
         content: (
             <ul className="list-disc pl-2">
-                <li>Programmer Analyst @Bitwise Soltions Pvt. Ltd.</li>
+                <li>Programmer Analyst @Bitwise Soltions Pvt. Ltd. (Jun 2019 - Present)</li>
+                <li>For details please check resume</li>
             </ul>
         )
     }
@@ -50,7 +51,7 @@ const AboutSection = () => {
     }
 
     return (  
-        <section className="text-white">
+        <section className="text-white" id="about">
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
             <Image src="/images/NirajMourya_Portrait2.jpeg" alt="Niraj Mourya Portrait No. 2" width={400} height={400} className="rounded-md" />
             <div className="mt-4 md:mt-0 text-left flex flex-col h-full">

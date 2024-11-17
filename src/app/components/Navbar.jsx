@@ -11,8 +11,8 @@ const navLinks = [
         path:"#about"
     },
     {
-        title:"Project",
-        path:"#project"
+        title:"Projects",
+        path:"#projects"
     },
     {
         title:"Contact",
@@ -22,8 +22,8 @@ const navLinks = [
 const NavBar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false)
     return (
-        <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
-            <div className="flex flex-wrap  items-center justify-between mx-auto px-4 py-2">
+        <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+            <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
                 <Link href={"/"} className="text-2xl md:text-5xl text-white font-semibold">
                 <Image src="/images/NMLogo.png" alt="Niraj Mourya Logo" width={120} height={100} />
                 </Link>
