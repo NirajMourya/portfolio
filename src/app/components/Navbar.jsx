@@ -11,6 +11,10 @@ const navLinks = [
         path:"#about"
     },
     {
+      title:"Blog",
+      path:"https://chronicles.nirajmourya.in/"
+     },
+    {
         title:"Projects",
         path:"#projects"
     },

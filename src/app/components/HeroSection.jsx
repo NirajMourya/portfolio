@@ -19,9 +19,9 @@ const HeroSection = () => {
                                 // Same substring at the start will only be typed out once, initially
                                 'Niraj Mourya',
                                 1000, // wait 1s before replacing "Mice" with "Hamsters"
-                                'Web Developer',
+                                'Full Stack Developer',
                                 1000,
-                                'SharePoint Developer',
+                                'Web Developer',
                                 1000
                             ]}
                             wrapper="span"
@@ -31,7 +31,7 @@ const HeroSection = () => {
                             
                         </h1>
                         <p className="text-[#ADB7BE] sm:text-lg text-lg lg:text-xl">
-                        Programmer Analyst at Bitwise Solutions. With over 5+ years of IT experience
+                        Technical Lead - I at CitiusTech. With over 5+ years of IT experience
                         </p>
                         <div>
                             <Link
