@@ -13,7 +13,7 @@ const TAB_DATA = [
                 <li>React</li>
                 <li>Node.js</li>
                 <li>ExpressJS</li>
-                <li>SharePoint</li>
+                <li>Sequelize</li>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>MongoDB</li>
@@ -61,7 +61,7 @@ const AboutSection = () => {
             <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
                    <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
                    <p className="text-base lg:text-lg">
-                   I am a Software Engineer with over 5 years of experience, currently working as a Technical Lead - I at CitiusTech. I specialize in front-end development, SharePoint, PowerShell scripting, and full-stack web development. Skilled in delivering efficient solutions, I have successfully built and supported several applications across departments and clients, driving automation and optimizing processes. I am proficient in JavaScript, C#, React, Node.js, ExpressJS, MySQL and MongoDB, and have a strong track record in managing the complete software development life cycle. 
+                   I am a Software Engineer with over 6 years of experience, currently working as a Technical Lead - I at CitiusTech. I specialize in front-end development, SharePoint, PowerShell scripting, and full-stack web development. Skilled in delivering efficient solutions, I have successfully built and supported several applications across departments and clients, driving automation and optimizing processes. I am proficient in JavaScript, C#, React, Node.js, ExpressJS, MySQL and MongoDB, and have a strong track record in managing the complete software development life cycle. 
                    </p>
                    <div className="flex flex-row justify-start mt-8">
                        <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>Skills</TabButton>
