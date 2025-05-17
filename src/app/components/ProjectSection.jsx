@@ -7,6 +7,15 @@ import { motion,useInView } from "framer-motion";
 const projectsData = [
     {
         id:1,
+        title:"Martian Chronicles",
+        description:"Blogm application based on ReactJS and Material UI",
+        image:"/images/projects/MartianChronicles.png",
+        tag:["All","Web","Mobile"],
+        gitURL:"/",
+        previewURL:"https://martianchronicles.nirajmourya.in/"
+    },
+    {
+        id:2,
         title:"Next.js Portfolio Website",
         description:"Personal display website based on Next.js and Tailwind",
         image:"/images/projects/Portfolio.png",
@@ -15,7 +24,7 @@ const projectsData = [
         previewURL:"https://nirajmourya.in/"
     },
     {
-        id:2,
+        id:3,
         title:"Bibliobazaar",
         description:"E-Commerce application for Bibliophile",
         image:"/images/projects/Bibliobazaar.png",
@@ -24,7 +33,7 @@ const projectsData = [
         previewURL:"https://bibliobazaar.netlify.app/"
     },
     {
-        id:3,
+        id:4,
         title:"Country Capital",
         description:"Country Capital Game",
         image:"/images/projects/CountryCapital.png",
@@ -33,7 +42,7 @@ const projectsData = [
         previewURL:"https://countrycapitalgame.netlify.app/"
     },
     {
-        id:4,
+        id:5,
         title:"Place Picker",
         description:"Place you would like to visit",
         image:"/images/projects/PlacePicker.png",
@@ -51,7 +60,7 @@ const projectsData = [
     //     previewURL:"https://shortlybyniraj.netlify.app/"
     // },
     {
-        id:5,
+        id:6,
         title:"Tick Tock Challenge",
         description:"Game to stop the timer at correct timer",
         image:"/images/projects/TickTockChallenge.png",
@@ -68,15 +77,15 @@ const projectsData = [
     //     gitURL:"/",
     //     previewURL:"/"
     // },
-    {
-        id:6,
-        title:"Elegant Context",
-        description:"Select items to shop",
-        image:"/images/projects/ElegantContext.png",
-        tag:["All","Web"],
-        gitURL:"https://github.com/NirajMourya/ElegantContext",
-        previewURL:"https://elegantcontextreact.netlify.app/"
-    },
+    // {
+    //     id:6,
+    //     title:"Elegant Context",
+    //     description:"Select items to shop",
+    //     image:"/images/projects/ElegantContext.png",
+    //     tag:["All","Web"],
+    //     gitURL:"https://github.com/NirajMourya/ElegantContext",
+    //     previewURL:"https://elegantcontextreact.netlify.app/"
+    // },
     {
         id:7,
         title:"Project Pilot",

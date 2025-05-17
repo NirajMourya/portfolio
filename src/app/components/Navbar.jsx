@@ -12,7 +12,7 @@ const navLinks = [
     },
     {
       title:"Blog",
-      path:"https://chronicles.nirajmourya.in/"
+      path:"https://martianchronicles.nirajmourya.in/"
      },
     {
         title:"Projects",
