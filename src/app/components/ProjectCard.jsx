@@ -1,27 +1,41 @@
-import { CodeBracketIcon,EyeIcon } from "@heroicons/react/24/outline";
+import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-const ProjectCard = ({imgURL,title,description, gitURL, previewURL}) => {
-    return (
-        <div>
-            <div  
-            className="h-52 md:h-72 rounded-t-xl relative group"
-            style={{background:`url(${imgURL}) no-repeat center`,backgroundSize:"contain"}}>
-            <div className="overlay  items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
-            <Link href={gitURL} className="h-14 w-14 border-2 mr-2 rounded-full relative border-[#ADB7BE] hover:border-white group/link">
-               <CodeBracketIcon className="h-10 w-10  text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white"/>
+const ProjectCard = ({ imgURL, title, description, gitURL, previewURL }) => {
+  return (
+    <article className="group overflow-hidden rounded-3xl bg-[#181818] shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1">
+      <div
+        className="relative h-52 md:h-72 bg-cover bg-center"
+        style={{ backgroundImage: `url(${imgURL})` }}
+      >
+        <div className="overlay absolute inset-0 flex items-center justify-center bg-[#181818] bg-opacity-0 transition duration-500 group-hover:bg-opacity-80">
+          <div className="flex gap-4 opacity-0 transition duration-500 group-hover:opacity-100">
+            <Link
+              href={gitURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ADB7BE] text-[#ADB7BE] hover:border-white hover:text-white"
+              aria-label={`View ${title} source code`}
+            >
+              <CodeBracketIcon className="h-6 w-6" />
             </Link>
-            <Link href={previewURL} className="h-14 w-14 border-2 rounded-full relative border-[#ADB7BE] hover:border-white group/link">
-               <EyeIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white"/>
+            <Link
+              href={previewURL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ADB7BE] text-[#ADB7BE] hover:border-white hover:text-white"
+              aria-label={`Preview ${title}`}
+            >
+              <EyeIcon className="h-6 w-6" />
             </Link>
-            </div>
-            </div>
-            <div className="text-white rounded-t-xl mt-3 bg-[#181818] py-6 px-4 ">
-                <h5 className="font-xl  font-semibold mb-2 ">{title}</h5>
-                <p className="text-[#ADB7BE]">
-                    {description}
-                </p>
-            </div>
+          </div>
         </div>
-    )
-}
+      </div>
+
+      <div className="px-5 py-6 text-white">
+        <h3 className="mb-2 text-xl font-semibold">{title}</h3>
+        <p className="text-[#ADB7BE]">{description}</p>
+      </div>
+    </article>
+  );
+};
 export default ProjectCard;
