@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function ErrorBoundary({ error, reset }) {
@@ -23,12 +24,12 @@ export default function ErrorBoundary({ error, reset }) {
           >
             Try Again
           </button>
-          <a
+          <Link
             href="/"
             className="inline-block rounded-full border-2 border-primary-500 px-6 py-3 text-white hover:bg-primary-500/10 transition"
           >
             Go Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
