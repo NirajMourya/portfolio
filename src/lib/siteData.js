@@ -1,5 +1,5 @@
 export const siteMeta = {
-  title: "Niraj Mourya | Frontend Engineer",
+  title: "Niraj Mourya | Full Stack Engineer",
   description: "Portfolio website for Niraj Mourya showcasing skills, projects, and contact.",
   url: "https://nirajmourya.in",
 };
@@ -15,7 +15,7 @@ export const navLinks = [
 export const heroContent = {
   greetings: "Hello, I'm",
   name: "Niraj Mourya",
-  roles: ["Full Stack Developer", "Web Developer", "Frontend Engineer"],
+  roles: ["Web Developer","Full Stack Developer", "Backend Developer", "Frontend Engineer"],
   description: "Lead Engineer - I at CitiusTech. With over 7+ years of IT experience.",
   resumePath: "/resume/Niraj_Mourya_Resume.pdf",
   image: {
@@ -224,6 +224,15 @@ export const certificationsData = [
     type: "image",
     src: "/images/certifications/claude-101.png",
     alt: "Claude 101 Certification",
+  },
+  {
+    id: 8,
+    title: "Claude Code in Action",
+    issuer: "Anthropic",
+    date: "2026",
+    type: "image",
+    src: "/images/certifications/claude-code-in-action.png",
+    alt: "Claude Code in Action Certification",
   }
   // Add more certifications here
 ];
