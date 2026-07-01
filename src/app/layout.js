@@ -14,10 +14,12 @@ const geistMono = localFont({
 });
 
 export const metadata = {
+  metadataBase: new URL(siteMeta.url),
   title: siteMeta.title,
   description: siteMeta.description,
-  themeColor: "#121212",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  alternates: {
+    canonical: siteMeta.url,
+  },
   openGraph: {
     title: siteMeta.title,
     description: siteMeta.description,
@@ -32,10 +34,18 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

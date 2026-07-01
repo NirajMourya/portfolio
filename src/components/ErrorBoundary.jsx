@@ -9,7 +9,7 @@ export default function ErrorBoundary({ error, reset }) {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#121212] text-white px-4">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-[#0b0b0d] px-4 text-white">
       <div className="text-center max-w-md">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-red-500">Oops!</h1>
         <p className="text-xl font-semibold mb-2">Something went wrong</p>
@@ -20,13 +20,13 @@ export default function ErrorBoundary({ error, reset }) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={() => reset()}
-            className="inline-block rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 px-6 py-3 text-white hover:bg-slate-200 transition"
+            className="inline-block rounded-[14px] bg-[#F59E3D] px-6 py-3 font-semibold text-[#111111] transition hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(245,158,61,0.25)]"
           >
             Try Again
           </button>
           <Link
             href="/"
-            className="inline-block rounded-full border-2 border-primary-500 px-6 py-3 text-white hover:bg-primary-500/10 transition"
+            className="inline-block rounded-[14px] border border-[#F59E3D]/30 px-6 py-3 font-semibold text-white transition hover:-translate-y-0.5 hover:border-[#F59E3D]/60 hover:bg-[#F59E3D]/10"
           >
             Go Home
           </Link>

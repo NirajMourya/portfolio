@@ -34,12 +34,12 @@ const CertificationSection = () => {
   }
 
   return (
-    <section id="certifications" ref={ref} className="py-24">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section id="certifications" ref={ref} className="py-16 sm:py-20 lg:py-24">
+      <div className="mb-12 text-center">
+        <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
           Certifications & Trainings
         </h2>
-        <p className="text-[#ADB7BE] max-w-2xl mx-auto">
+        <p className="mx-auto max-w-2xl text-slate-300">
           Professional certifications and trainings that showcase my commitment to continuous learning.
         </p>
       </div>
@@ -48,10 +48,10 @@ const CertificationSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid auto-rows-fr grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
       >
         {certificationsData.map((cert) => (
-          <motion.div key={cert.id} variants={itemVariants}>
+          <motion.div key={cert.id} variants={itemVariants} className="h-full">
             <CertificationCard
               title={cert.title}
               issuer={cert.issuer}

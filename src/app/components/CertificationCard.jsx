@@ -61,7 +61,7 @@ const CertificationCard = ({ title, issuer, date, src, alt }) => {
         </div>
       )}
 
-      <article className="group overflow-hidden rounded-2xl bg-[#181818] shadow-lg shadow-black/20 transition-transform duration-300 hover:-translate-y-1">
+      <article className="group flex h-full flex-col overflow-hidden rounded-[24px] border border-[#F59E3D]/15 bg-[#121317] shadow-[0_16px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-[#F59E3D]/35 hover:shadow-[0_20px_70px_rgba(245,158,61,0.12)]">
         <button
           type="button"
           onClick={() => setIsOpen(true)}
@@ -78,9 +78,9 @@ const CertificationCard = ({ title, issuer, date, src, alt }) => {
           <span className="absolute inset-0 bg-black/10" />
         </button>
 
-        <div className="px-5 py-6 text-white">
-          <h3 className="mb-2 text-lg font-semibold">{title}</h3>
-          <p className="text-sm text-[#ADB7BE]">
+        <div className="flex flex-1 flex-col px-5 py-6 text-white">
+          <h3 className="mb-2 text-lg font-semibold text-white">{title}</h3>
+          <p className="text-sm leading-6 text-slate-300">
             {issuer} • {date}
           </p>
         </div>
