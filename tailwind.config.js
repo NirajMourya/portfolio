@@ -11,12 +11,20 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: {
+          DEFAULT: "#F59E3D",
+          400: "#FCD34D",
+          500: "#F59E3D",
+          600: "#D97706",
+        },
+        secondary: {
+          DEFAULT: "#FDBA74",
+          500: "#FDBA74",
+        },
       },
     },
     colors: {
       ...colors,
-      primary: colors.purple,
-      secondary: colors.pink,
     }
   },
   plugins: [],

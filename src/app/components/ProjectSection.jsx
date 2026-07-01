@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
@@ -20,8 +20,11 @@ const ProjectSection = () => {
     setTag(newTag);
   };
 
-  const filteredProjects = projectsData.filter((project) => project.tags.includes(tag));
-  const tags = getUniqueTags(projectsData);
+  const tags = useMemo(() => getUniqueTags(projectsData), []);
+  const filteredProjects = useMemo(
+    () => projectsData.filter((project) => project.tags.includes(tag)),
+    [tag]
+  );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -29,19 +32,24 @@ const ProjectSection = () => {
   };
 
   return (
-    <section id="projects" ref={ref}>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">My Projects</h2>
-      <div className="text-white flex flex-wrap justify-center gap-2 py-2">
-        {tags.map((tagName, index) => (
+    <section id="projects" ref={ref} className="px-2 py-16 sm:py-20 lg:py-24">
+      <div className="mx-auto max-w-5xl text-center">
+        <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">My Projects</h2>
+        <p className="mx-auto max-w-2xl text-sm leading-7 text-slate-300 sm:text-base">
+          A collection of web experiences focused on thoughtful interfaces, modern tooling, and polished product delivery.
+        </p>
+      </div>
+      <div className="mt-8 flex flex-wrap justify-center gap-2 py-2">
+        {tags.map((tagName) => (
           <ProjectTag
-            key={index}
+            key={tagName}
             onClick={handleTagChange}
             tag={tagName}
             isSelected={tag === tagName}
           />
         ))}
       </div>
-      <ul className="grid gap-8 md:grid-cols-3 md:gap-12">
+      <ul className="grid auto-rows-fr gap-8 md:grid-cols-3 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={project.id}
@@ -49,6 +57,7 @@ const ProjectSection = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.1 }}
+            className="h-full"
           >
             <ProjectCard
               title={project.title}
@@ -56,6 +65,9 @@ const ProjectSection = () => {
               description={project.description}
               gitURL={project.gitURL}
               previewURL={project.previewURL}
+              tags={project.tags}
+              featured={false}
+              category={project.tags.find((currentTag) => currentTag !== "All") || "Web"}
             />
           </motion.li>
         ))}

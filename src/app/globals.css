@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #121212;
+  --background: #0b0b0d;
   --foreground: #f8fafc;
+  --primary: #f59e3d;
 }
 
 * {
@@ -19,10 +20,63 @@ body {
   min-height: 100vh;
   margin: 0;
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
+  background-image:
+    radial-gradient(circle at top left, rgba(245, 158, 61, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgba(245, 158, 61, 0.1), transparent 24%),
+    linear-gradient(rgba(245, 158, 61, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 61, 0.035) 1px, transparent 1px);
+  background-size: auto, auto, 72px 72px, 72px 72px;
   font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
 }
 
 ::selection {
-  background: rgba(139, 92, 246, 0.35);
+  background: rgba(245, 158, 61, 0.35);
+  color: #fff;
+}
+
+.hero-glow {
+  background: radial-gradient(circle, rgba(245, 158, 61, 0.16), transparent 70%);
+}
+
+.avatar-ring {
+  position: relative;
+  isolation: isolate;
+}
+
+.avatar-ring::before,
+.avatar-ring::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 9999px;
+  border: 1px solid rgba(245, 158, 61, 0.24);
+}
+
+.avatar-ring::before {
+  box-shadow: 0 0 0 1px rgba(245, 158, 61, 0.08), 0 0 40px rgba(245, 158, 61, 0.16);
+  animation: driftRing 10s linear infinite;
+}
+
+.avatar-ring::after {
+  inset: -16px;
+  opacity: 0.7;
+  border-color: rgba(245, 158, 61, 0.12);
+  animation: driftRing 14s linear infinite reverse;
+}
+
+@keyframes driftRing {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-ring::before,
+  .avatar-ring::after {
+    animation: none;
+  }
 }
