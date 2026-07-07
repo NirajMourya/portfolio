@@ -142,10 +142,10 @@ export const projectsData = [
   {
     id: 1,
     title: "Martian Chronicles",
-    description: "Blog application built with ReactJS and Material UI.",
+    description: "Blog application built with Next.js and Material UI.",
     image: "/images/projects/MartianChronicles.png",
     tags: ["All", "Web", "Mobile"],
-    gitURL: "https://github.com/NirajMourya/",
+    gitURL: "https://github.com/NirajMourya/MartianChronicles",
     previewURL: "https://martianchronicles.nirajmourya.in/",
   },
   {
@@ -168,6 +168,15 @@ export const projectsData = [
   },
   {
     id: 4,
+    title: "New Morea Tailor Website",
+    description: "Website for my family tailoring business.",
+    image: "/images/projects/newmoreatailor.png",
+    tags: ["All", "Web", "Mobile"],
+    gitURL: "https://github.com/NirajMourya/newmoreatailor",
+    previewURL: "https://www.newmoreatailor.com/",
+  },
+  {
+    id: 5,
     title: "Country Capital",
     description: "Country capital trivia game.",
     image: "/images/projects/CountryCapital.png",
@@ -176,7 +185,7 @@ export const projectsData = [
     previewURL: "https://countrycapitalgame.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Place Picker",
     description: "Travel planning app to save destination ideas.",
     image: "/images/projects/PlacePicker.png",
@@ -185,22 +194,13 @@ export const projectsData = [
     previewURL: "https://placepickerreact.netlify.app/",
   },
   {
-    id: 6,
+    id: 7,
     title: "Tick Tock Challenge",
     description: "Game built to stop the timer at the right moment.",
     image: "/images/projects/TickTockChallenge.png",
     tags: ["All", "Web"],
     gitURL: "https://github.com/NirajMourya/TickTockChallenge",
     previewURL: "https://tictockchallenge.netlify.app/",
-  },
-  {
-    id: 7,
-    title: "Project Pilot",
-    description: "Task tracking app for project work.",
-    image: "/images/projects/ProjecsPilot.png",
-    tags: ["All", "Web"],
-    gitURL: "https://github.com/NirajMourya/ProjectPilot",
-    previewURL: "https://projectspilot.netlify.app/",
   },
   {
     id: 8,
