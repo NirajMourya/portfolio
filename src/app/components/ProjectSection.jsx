@@ -68,6 +68,7 @@ const ProjectSection = () => {
               tags={project.tags}
               featured={false}
               category={project.tags.find((currentTag) => currentTag !== "All") || "Web"}
+              comingSoon={project.comingSoon}
             />
           </motion.li>
         ))}

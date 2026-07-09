@@ -1,7 +1,7 @@
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-const ProjectCard = ({ imgURL, title, description, gitURL, previewURL, tags = [], featured = false, category = "Web" }) => {
+const ProjectCard = ({ imgURL, title, description, gitURL, previewURL, tags = [], featured = false, category = "Web", comingSoon = false }) => {
   return (
     <article className={`group flex h-full flex-col overflow-hidden rounded-[24px] border border-[#F59E3D]/15 bg-[#121317] shadow-[0_16px_60px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:border-[#F59E3D]/35 hover:shadow-[0_20px_70px_rgba(245,158,61,0.12)] ${featured ? "md:col-span-2" : ""}`}>
       <div className="relative h-56 md:h-72">
@@ -17,6 +17,11 @@ const ProjectCard = ({ imgURL, title, description, gitURL, previewURL, tags = []
           {featured ? (
             <span className="rounded-full bg-[#F59E3D] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#111111]">
               Featured
+            </span>
+          ) : null}
+          {comingSoon ? (
+            <span className="rounded-full bg-blue-500 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-white">
+              Coming Soon
             </span>
           ) : null}
         </div>
