@@ -186,40 +186,15 @@ export const projectsData = [
   },
   {
     id: 6,
-    title: "Place Picker",
-    description: "Travel planning app to save destination ideas.",
-    image: "/images/projects/PlacePicker.png",
-    tags: ["All", "Web"],
-    gitURL: "https://github.com/NirajMourya/PlacePicker",
-    previewURL: "https://placepickerreact.netlify.app/",
+    title: "Swole Mate",
+    description: "A personal trainer in your pocket.",
+    image: "/images/projects/SwoleMate.png",
+    tags: ["All", "Mobile"],
+    gitURL: "https://github.com/NirajMourya/SwoleMate",
+    previewURL: "https://github.com/NirajMourya/SwoleMate",
+    comingSoon: true,
   },
-  {
-    id: 7,
-    title: "Tick Tock Challenge",
-    description: "Game built to stop the timer at the right moment.",
-    image: "/images/projects/TickTockChallenge.png",
-    tags: ["All", "Web"],
-    gitURL: "https://github.com/NirajMourya/TickTockChallenge",
-    previewURL: "https://tictockchallenge.netlify.app/",
-  },
-  {
-    id: 8,
-    title: "React Brain Teaser",
-    description: "React quiz application to test logic skills.",
-    image: "/images/projects/ReactBrainTeaser.png",
-    tags: ["All", "Web"],
-    gitURL: "https://github.com/NirajMourya/ReactBrainTeaser",
-    previewURL: "https://reactbrainteaser.netlify.app/",
-  },
-  {
-    id: 9,
-    title: "Reactoogle",
-    description: "Search engine clone built with React.",
-    image: "/images/projects/Reactoogle.png",
-    tags: ["All", "Web"],
-    gitURL: "https://github.com/NirajMourya/Reactoogle",
-    previewURL: "https://reactoogle.netlify.app/",
-  },
+
 ];
 
 export const socialLinks = [
